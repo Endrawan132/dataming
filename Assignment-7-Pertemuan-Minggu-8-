@@ -1,0 +1,31 @@
+import numpy as np
+In [3]:
+def forwardPass(inputs, weight, bias):
+  w_sum = np.dot(inputs, weight) + bias
+
+  # Linear Activation f(x) = x
+  act = w_sum
+
+  return act
+In [4]:
+# PRE-TRAINED Weights & Biases after Training
+
+W = np.array([[2.99999928]])
+b = np.array([1.99999976])
+In [6]:
+# Initialize Input Data
+inputs = np.array([[7], [8], [9], [10]])
+In [7]:
+
+#Output of output Layer
+o_out = forwardPass(inputs, W, b)
+
+print('Output Layer Output (Linear)')
+print('================================')
+print(o_out, "\n")
+Output Layer Output (Linear)
+================================
+[[22.99999472]
+ [25.999994  ]
+ [28.99999328]
+ [31.99999256]] 
